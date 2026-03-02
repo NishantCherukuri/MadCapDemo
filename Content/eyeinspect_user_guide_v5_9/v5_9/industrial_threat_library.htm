@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="industrial_threat_library" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\industrial_threat_library.dita">
+    <head><title>Industrial Threat Library</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Industrial Threat Library</h1>
+        <p>The Industrial Threat Library detection engine performs several checks on the monitored
+            data to look for known vulnerabilities, possible misconfiguration and other known
+            threats. The Industrial Threat Library (ITL) provides a large number of pre-configured
+            checks and controls to detect ICS weaknesses and threats at an early stage and offers
+            intelligence about the cause and remediation of the problem. The checks are divided into
+            three categories:</p>
+        <p>
+            <ol id="ol_ynd_kbf_sfc">
+                <li><b>Networking:</b> To detect device and network misconfiguration, such as hosts
+                    not receiving NTP responses or connectivity issues.</li>
+                <li><b>Operations:</b> To detect problems and threats to the industrial process,
+                    such as malfunctioning or misbehaving devices or the use of potentially
+                    dangerous operations (e.g., restart commands).</li>
+                <li><b>Security: </b>To detect security threats and vulnerabilities, such as the use
+                    of insecure protocols or protocol versions (e.g., TELNET or SSHv1), exploits of
+                    known vulnerabilities, Indicators of Compromise (IoCs) and user defined
+                    blacklists (e.g., blacklisted IPs).</li>
+            </ol>
+        </p>
+        <p> The user can configure which checks will be performed by the Sensor on the Industrial
+            Threat Library page (accessed by clicking on "Industrial threat library checks" on the
+            Sensor page). Each individual check can be enabled or disabled for the entire network or
+            only for some of the monitored hosts, by defining "Exceptions" (exceptions can be
+            defined by clicking on the corresponding entry on the tree menu on the left of the
+            page). Some checks have configuration settings, these check-specific parameters can be
+            configured from the Industrial Threat Library page as well by clicking on the individual
+            check in the table.</p>
+        <div class="section" id="section_sxw_gjf_sfc">
+            <h2 class="sectiontitle">Multi-factor File Dissection</h2>
+            <p>eyeInspect Passive Sensors have the ability to isolate files transferred over the
+                network via SMB and TFTP and perform checks on them. In particular, Passive Sensors
+                scan files against known malicious hashes (MD5) and YARA rules. If a malicious files
+                transfer is detected, a corresponding ITL alert is raised and the malicious file is
+                made available to the user for download and offline analysis. In addition to the
+                analysis within eyeInspect, users can also forward isolated files to third-party
+                systems (e.g. sandboxing solutions) leveraging the "new alert" SD Script callback.
+                The following restrictions apply to the Multi-Factor File Dissection
+                    functionality:<ul id="ul_lnf_m3f_sfc"><li>Only files up to 1 GB are analyzed against known malicious hashes</li><li>Only files up to 4 MB are analyzed against YARA rules</li><li>Only files up to 4 MB are accessible via script callback associated with an
+                        alert and made available to the user for download</li><li>Archives and encrypted files are not analyzed</li></ul>eyeInspect installations already contain some built-in known malicious file
+                hashes and YARA rules. The built-in YARA rules cannot be deleted from the Passive
+                Sensors databases, but can be enabled or disabled as all other checks.</p>
+        </div>
+        <p>Select one or more Industrial threat library (ITL) checks by selecting the checkbox(es)
+            in the first column, to enable the action menu above the ITL table. You can
+            pause/resume, export and share the ITL configurations.</p>
+        <p>Open an ITL check by clicking the name to view the following ITL attribute details:</p>
+        <ul id="ul_g41_44f_sfc">
+            <li>Overview</li>
+            <li>List of all checks</li>
+            <li>Exceptions</li>
+            <li>Checks by category</li>
+            <li>Checks by protocol</li>
+        </ul>
+        <p>To run individual checks, select them using the checkbox in the first column and click
+            the Play button on top of the checks table.</p>
+        <p>The following options are available in the secondary nav bar in the Industrial threat
+            library page: </p>
+        <div class="section" id="section_y3k_d4f_sfc">
+            <h2 class="sectiontitle">Back</h2>
+            <p>Navigate to the previous page.</p>
+        </div>
+        <div class="section" id="section_kzs_24f_sfc">
+            <h2 class="sectiontitle">Finish</h2>
+            <p>Save the ITL configurations.</p>
+        </div>
+        <div class="section" id="section_qnw_q4f_sfc">
+            <h2 class="sectiontitle">Reset</h2>
+            <p>Reset the ITL configurations.</p>
+        </div>
+        <div class="section" id="section_ecf_r4f_sfc">
+            <h2 class="sectiontitle">Reload</h2>
+            <p>Reload the ITL configurations.</p>
+        </div>
+    </body>
+</html>

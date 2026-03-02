@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="export_reports" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\export_reports.dita">
+    <head><title>Export Reports</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Export Reports</h1>
+        <p>The eyeInspect Command Center allows users to export and schedule reports in .DOCX and
+            .CSV formats. </p>
+        <p>Two types of reports are available:</p>
+        <ul id="ul_dnk_2wh_cgc">
+            <li>Analysis - This option exports an analysis of host and alert information in .DOCX
+                format</li>
+            <li>Raw data - This option exports one or multiple .CSV files that contain the plain
+                data of the asset inventory and alerts</li>
+        </ul>
+        <p>The export report window contains the following steps:</p>
+        <div class="section" id="section_nrd_pvh_cgc">
+            <h2 class="sectiontitle">Step 1: Information</h2>
+            <p>The first step is to enter a report name, select the report type and to select the
+                information to be included in the report. The following information can be included,
+                based on the report type selected:</p>
+            <p><b><u>Report type: Analysis (Word Doc.):</u></b>
+            </p>
+            <ul id="export_report_ul_gwn_2tr_rcc">
+                <li><b>Overview</b> - This page shows an overview of your network in terms of asset
+                    classification, protocols and alerts.</li>
+                <li><b>Asset Report</b> - Includes Asset classification (Purdue Model) and
+                    Vulnerable assets<ul id="export_report_ul_n45_2tr_rcc"><li>(Optional) Include Detailed Asset Inventory information, with a limit of
+                            500 assets</li></ul></li>
+                <li><b>Alerts Report</b> - Includes Security, Operational and Networking alerts.
+                    Alerts are grouped by Event type ID, Severity, Event specific info, L2, L3, L4,
+                    L7 Protocol, Sensor, Engine Type and Profile/Module.<ul id="export_report_ul_v1b_ftr_rcc"><li>(Optional) Include Non-aggregated alerts with a limit of 2000
+                            alerts</li></ul><div class="note" id="note_i11_jcg_ggc"><b>Note: </b>The Command Center may become unresponsive when
+                        exporting a report of type Analysis (Word Doc) with a large number of
+                        devices. To avoid this issue, it is recommended to export a maximum of: <ul id="ul_h1z_f1x_rcc"><li>Assets view: 110k entries</li><li>Devices view: 110k entries</li><li>Links view: 640k entries</li><li>Alerts table view (aggregated): 1.5 million entries</li><li>Alerts table view (non-aggregated): 220k entries</li></ul></div></li>
+            </ul>
+        </div>
+        <p><b><u>Report type: Raw Data (CSV):</u></b>
+        </p>
+        <ul id="ul_a5w_hzr_dgc">
+            <li><b>Asset Inventory</b> - Include the asset inventory information you want in the
+                report. Choose from Assets, Changelogs, Links and Vulnerabilities. Multiple options
+                can be selected.</li>
+            <li><b>Events</b> - Include the event information you want in the report. Choose from
+                grouped alerts and ungrouped alerts. Both options can be selected.</li>
+        </ul>
+        <div class="section" id="section_u4g_qvh_cgc">
+            <h2 class="sectiontitle">Step 2: Source</h2>
+            <p>Select the sources for the Asset and Alert Tabs to get information to populate the
+                report from. It is possible to choose the default source, or select from the list of
+                    templates.<div class="note" id="note_lqv_c5x_fgc"><b>Note: </b>Users will only be able to see the sources
+                    which they have permissions for.</div></p>
+            <p>
+                <div class="note" id="note_k1t_qsx_fgc"><b>Note: </b>The list of available sources depends on the selections
+                    made in the Information step: <ul id="ul_mqv_5sx_fgc"><li>If Overview report type is selected, there are no sources necessary and
+                            hence the sources will be greyed out.</li><li> If Asset or Alerts report type is selected, the Asset or Alert Tab
+                            sources will be available respectively.</li><li>If both Asset and Alerts report types are selected, both the Asset Tab
+                            and Alert Tab sources will be available.</li></ul></div>
+            </p>
+        </div>
+        <div class="section" id="section_fwh_5vh_cgc">
+            <h2 class="sectiontitle">Step 3: (Optional) Schedule</h2>
+            <p>From the Schedule tab, it is possible to automatically email the reports on a
+                periodic basis. Scheduling reports is optional. The email server and the recurrence
+                details can be set on this tab, along with the list of recipients, the email subject
+                and an optional message. </p>
+        </div>
+        <div class="section" id="section_dw5_vvh_cgc">
+            <h2 class="sectiontitle">Step 4: Summary</h2>
+            <p>The summary tab shows the summary of the options selected in the previous tabs.</p>
+            <p>Once the report is exported, a popup is displayed over the top navigation bar with
+                the status of the report.</p>
+            <p>
+                <div class="note" id="note_qkl_vxh_cgc"><b>Note: </b>For optimal performance, CSV file downloads have the
+                    following limits:<ul id="ul_t2j_xxh_cgc"><li>100K entries for assets/changelogs/vulnerabilities </li><li>600K entries for links</li><li>200K entries for alerts</li></ul></div>
+            </p>
+        </div>
+        <div class="note" id="note_khm_vmr_fgc"><b>Note: </b>Do not navigate away from the Export Reports window until the
+            export is complete. </div>
+        <div class="section" id="section_fjg_xvh_cgc">
+            <h2 class="sectiontitle">Manage Scheduled Reports</h2>
+            <p>To manage scheduled reports, navigate to <b>Settings &gt; System Settings</b> and from
+                the <b>Reports</b> section, select <b>Manage Reports</b>. Scheduled reports can be
+                paused/resumed, edited, and deleted. After editing a report, a download will be
+                triggered.</p>
+            <p>
+                <div class="note" id="note_n2r_lwh_cgc"><b>Note: </b>Users can only export or schedule exports for data they
+                    have permission to access (Monitored Hosts or Alerts). Otherwise, an
+                    “insufficient user permissions” message is displayed.</div>
+            </p>
+        </div>
+        <div class="section" id="section_pxw_yvh_cgc">
+            <h2 class="sectiontitle">Filters for a Scheduled Report</h2>
+            <p>
+                <ul id="export_report_ul_mhd_mbs_rcc">
+                    <li>A scheduled report uses the filters of an asset/alert tab as they were set
+                        at the moment of creating the schedule.</li>
+                    <li>If the user changes/deletes the tab, the filters that were used to generate
+                        the scheduled report <b>will not</b> be affected.</li>
+                    <li>When editing a report, the user may select a new tab for the assets or
+                        alerts section to update the filters.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="section" id="section_r4q_1wh_cgc">
+            <h2 class="sectiontitle">Required Permissions</h2>
+            <p>
+                <ul id="export_report_ul_bpk_pbs_rcc">
+                    <li>There must be a Mail Server configured specifically for the export doc
+                        report feature to schedule reports. Only users with edit permissions for the
+                        Mail Server Configuration resource may setup/edit a Mail Server.</li>
+                    <li>Users without view permissions for the Mail Server Configuration resource
+                        won’t be able to schedule a report, only download it immediately.</li>
+                    <li>Users with view permissions on Alerts <b>and</b> Monitored Networks will be
+                        able to view and edit the scheduled reports of other users. Users missing
+                        one of these permissions will only be able to see their own scheduled
+                        reports.</li>
+                </ul>
+            </p>
+        </div>
+    </body>
+</html>

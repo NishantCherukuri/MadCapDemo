@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DitaImport
+  ProjectName="eyeInspect User Guide v5.9.0"
+  ProjectFolder="C:\Users\ncherukuri\Documents\My Projects"
+  KeepSourceLinks="true"
+  KeepElementIDs="true"
+  CreateSeparateTocs="true"
+  SaveContentToOneFolder="true"
+  Stylesheet="../../../../../Downloads/custom (1).css"
+  LastImport="2026-02-27T15:45:52.7804010+01:00">
+  <Files>
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/eyeinspect_user_guide_v5_9.ditamap"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/eyeinspect_user_guide_v5_9.ditamap" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles>
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/about_eyeinspect.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/about_eyeinspect.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/getting_started_with_eyeinspect.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/getting_started_with_eyeinspect.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/command_center_diagnostics.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/command_center_diagnostics.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/export_reports.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/export_reports.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/home.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/home.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/assets.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/assets.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/asset_inventory.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/asset_inventory.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/threat_scenarios_classic_map.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/threat_scenarios_classic_map.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/host_editing_monitored_hosts.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/host_editing_monitored_hosts.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/host_changelogs.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/host_changelogs.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/monitored_networks.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/monitored_networks.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/asset_baseline.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/asset_baseline.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/events.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/events.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/alerts.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/alerts.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/network_logs.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/network_logs.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/network_logs_scan.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/network_logs_scan.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/analytics.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/analytics.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/sensors.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/sensors.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/sensors_overview.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/sensors_overview.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/passive_sensor_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/passive_sensor_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/industrial_threat_library.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/industrial_threat_library.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/custom_checks_sd_scripts.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/custom_checks_sd_scripts.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-passive-sensors-version-5.1.0-or-higher.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-passive-sensors-version-5.1.0-or-higher.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_sensor_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_sensor_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-active-sensors.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-active-sensors.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-pcap-replay-sensors.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/adding-pcap-replay-sensors.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_queries.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_queries.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_query_plans.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_query_plans.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/general_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/general_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/maintenance_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/maintenance_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/services_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/services_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/events_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/events_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_scans_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/active_scans_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/assets_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/assets_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/user_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/v5_9/user_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/risk_and_threats_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/risk_and_threats_settings.dita" />
+    <Url
+      Source="../../../../gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/reports_settings.dita"
+      AbsoluteSource="file:///C:/Users/ncherukuri/Documents/gitdoc-eyeinspect/eyeInspect/eyeInspect_User_Guide/reports_settings.dita" />
+  </CollectedSourceFiles>
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/eyeInspect_Installation_Guide/Graphics/eyeinspect_architecture_new.jpeg"
+      TimeStamp="24-Feb-26 15:59:43" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/about_eyeinspect.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/Graphics/primary navigation bar icons.png"
+      TimeStamp="24-Feb-26 15:59:44" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/getting_started_with_eyeinspect.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/command_center_diagnostics.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/export_reports.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/home.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/assets.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeInspect_Edge_Collector/Edge_Collector_24.3/edge_collector_24_3_user_guide/asset-table-templates.png"
+      TimeStamp="24-Feb-26 15:59:43" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/asset_inventory.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/threat_scenarios_classic_map.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/host_editing_monitored_hosts.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/host_changelogs.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeInspect_Edge_Collector/edge_collector_25_2_1/Graphics/csv_exp_imp.jpg"
+      TimeStamp="24-Feb-26 15:59:43" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/monitored_networks.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/asset_baseline.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/events.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/alerts.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/network_logs.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/network_logs_scan.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/Graphics/widget_options.png"
+      TimeStamp="24-Feb-26 15:59:44" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/analytics.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/sensors.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/sensors_overview.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/passive_sensor_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/industrial_threat_library.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/custom_checks_sd_scripts.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/adding-passive-sensors-version-5.1.0-or-higher.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/active_sensor_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/adding-active-sensors.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/adding-pcap-replay-sensors.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeInspect_Edge_Collector/edge_collector_25_2_1/Graphics/active_scan_actions.png"
+      TimeStamp="24-Feb-26 15:59:43" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/active_queries.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeInspect_Edge_Collector/edge_collector_25_2_1/Graphics/active_query_plan_actions.png"
+      TimeStamp="24-Feb-26 15:59:43" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/active_query_plans.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/general_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/maintenance_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/services_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/events_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/active_scans_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/assets_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/v5_9/user_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/risk_and_threats_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/reports_settings.htm"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../TOCs/eyeinspect_user_guide_v5_9.fltoc"
+      TimeStamp="27-Feb-26 15:45:45" />
+    <Url
+      Source="../../Content/eyeinspect_user_guide_v5_9/custom (1).css"
+      TimeStamp="27-Feb-26 15:45:45" />
+  </GeneratedFiles>
+  <ImportStyles />
+</DitaImport>

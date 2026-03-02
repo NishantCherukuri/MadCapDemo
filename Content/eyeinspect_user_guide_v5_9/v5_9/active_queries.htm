@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="active_queries" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\active_queries.dita">
+    <head><title>Active Queries</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Active Queries</h1>
+        <p>The Active Queries page shows a list of active queries and associated details in a
+            tabular format. Click a row to open the Scan details window to view detailed information
+            about the query. </p>
+        <p>To perform actions on one or more active queries, select the respective checkbox(es) in
+            the first column to activate the action icons above the table - <img src="../../eyeInspect_Edge_Collector/edge_collector_25_2_1/Graphics/active_scan_actions.png" id="image_i2z_mqf_kfc" /></p>
+        <p>The actions are, in order:</p>
+        <ul id="ul_m4b_3qf_kfc">
+            <li>Download the query details in a zip format</li>
+            <li>Stop the active query</li>
+            <li>Remove the active query</li>
+            <li>Reload the active queries table</li>
+        </ul>
+        <div class="section" id="section_kkw_4qf_kfc">
+            <h2 class="sectiontitle">Start an Active Query</h2>
+            <p>Click Start an Active Query from the secondary navigation bar to open the Start an
+                Active Query dialog, which contains the following steps:</p>
+            <p><b><u>Step 1: Configuration</u></b>
+            </p>
+            <p>Select the query type and the associated parameters that define how the active query
+                will be executed by the sensor.</p>
+            <p><b><u>Step 2: Target</u></b>
+            </p>
+            <p>Select the target devices either by choosing from predefined filters or by applying
+                filters based on IP Reuse Domains and Network Addresses. Note that IPv6 network
+                addresses are supported. </p>
+            <p><b><u>Step 3: Options</u></b>
+            </p>
+            <p>Choose the query options from the following:</p>
+            <ul id="ul_qrd_wc3_cgc">
+                <li><b>Active Query</b>: The scan is executed immediately upon completion of the
+                    flow.</li>
+                <li><b>Active Query Plan</b>: The configuration is saved and can be scheduled for
+                    future execution via the <a href="active_query_plans.htm">Active Query
+                        Plans</a> page.</li>
+            </ul>
+            <p>If you are unsure about specific configuration values, you can save the setup as a
+                query plan and edit it later using the same dialog. Note that once saved as a query
+                plan, the type cannot be changed - it will remain a query plan.</p>
+            <p><b><u>Step 4: Summary</u></b>
+            </p>
+            <p>This step presents a consolidated view of the configuration defined in the previous
+                steps:</p>
+            <ul id="ul_wmh_bd3_cgc">
+                <li>Sensitive information, such as passwords, will not be displayed in this
+                    summary.</li>
+                <li>Depending on the selected option in the previous step, the user will be
+                    presented with either a <b>Start</b> button (to execute an active query) or a
+                        <b>Save</b> button (to store the query plan).</li>
+                <li>If any validation errors are detected based on the configuration, they will be
+                    clearly highlighted, allowing the user to make necessary corrections.</li>
+            </ul>
+            <p>Upon successful completion of the form, a confirmation message is displayed.</p>
+        </div>
+        <div class="section" id="section_cgk_xkg_sfc">
+            <h2 class="sectiontitle">Improve OS/Ports and OT Ports Query Performance</h2>
+            <p>For active queries of OS/Ports and OT Ports query types, the following two new
+                parameters are introduced to improve the query performance:</p>
+            <p>
+                <table id="table_vw3_g4g_sfc" style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray; border-collapse: collapse;">
+                    <col title="c1" style="width: 1;" />
+                    <col title="c2" style="width: 1;" />
+                    <thead>
+                        <tr>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Parameter</th>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">OVERWRITE_SERVICE_DISCOVERY</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Accepts boolean value: True/False</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">OVERWRITE_AGGRESSIVENESS</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Defines the aggressiveness level on a scale of 1 (least) to 5
+                                    (most). </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+            <p>To use these parameters, do the following:</p>
+            <ol id="ol_dd1_yng_sfc">
+                <li>
+                    <p>Log in to the Active sensor host using SSH.</p>
+                </li>
+                <li>
+                    <p>Edit the <code>/opt/active-sensor/.env</code> file and add the
+                        parameters. For
+                        example:<pre id="codeblock_wf3_k4g_sfc" class="language-bourne">OVERWRITE_SERVICE_DISCOVERY=True
+OVERWRITE_AGGRESSIVENESS=3</pre></p>
+                </li>
+                <li>
+                    <p>Save the file.</p>
+                </li>
+                <li>
+                    <p>Restart the container by running the following
+                        commands:<pre id="codeblock_phb_m4g_sfc" class="language-bourne">sudo /opt/active-sensor/manage-containers.sh --rm
+sudo /opt/active-sensor/manage-containers.sh --up</pre></p>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

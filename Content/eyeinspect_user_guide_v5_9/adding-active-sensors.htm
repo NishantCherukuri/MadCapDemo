@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="task-2829" class="concept" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\adding-active-sensors.dita">
+    <head><title>Adding Active Sensors to the Command Center</title>
+        <link href="custom (1).css" rel="stylesheet" />
+    </head>
+    <body class="conbody">
+        <h1 class="concepttitle">Adding Active Sensors to the Command Center</h1>
+        <p>After installing or upgrading an Active Sensor v2.0 or above, you must add a new Active
+			Sensor to the Command Center:</p>
+        <ol id="ol_zvt_z1t_rcc">
+            <li>Sign in to the Command Center.</li>
+            <li>
+                <p>Go to <span class="uicontrol">Sensors &gt; Sensors overview</span>.</p>
+            </li>
+            <li>
+                <p>In the secondary navbar, click <span class="uicontrol">New sensor &gt; Enrollment
+						Overview</span>.</p>
+            </li>
+            <li>
+                <p>In the table, find the respective sensor. The Enrollment Status should be
+						<span class="uicontrol">Pending</span>.</p>
+            </li>
+            <li>
+                <p>Select the sensor.</p>
+            </li>
+            <li>
+                <p>Click on the <span class="uicontrol">Actions</span> button.</p>
+            </li>
+            <li>
+                <p>From the drop-down, select <span class="uicontrol">Accept request</span>.</p>
+            </li>
+            <li>
+                <p>Review the below information in the popover modal window, configure the Targetable IP Ranges,
+					and then click <span class="uicontrol">Accept request</span>.</p>
+            </li>
+        </ol>
+        <table class="simpletable" id="simpletable_efl_452_3fc">
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <tbody>
+                <tr>
+                    <td class="stentry">Sensor Name</td>
+                    <td class="stentry">This is a human readable name, for the ease of the operator. </td>
+                </tr>
+                <tr>
+                    <td class="stentry">IP Address Reuse, IP Reuse Domain</td>
+                    <td class="stentry">If IP Reuse domains are configured in the Command Center, this option
+					enables the operator to select the right IP Reuse domains for the Active Sensor.
+					This information is used to ensure tasks that target reused IP addresses can
+					still be resolved correctly. There must be no overlap between selected IP Reuse
+					Domains. </td>
+                </tr>
+                <tr>
+                    <td class="stentry">Targetable Networks</td>
+                    <td class="stentry">An Active Sensor has a restricted list of IP addresses it is allowed to
+					query. The operator must set this list by defining and selecting one or more
+					Targetable Networks. Selected domains can be recognized by the darkened
+					background color. The plus icon to the right of the field provides an easy way
+					to add new Targetable Network definitions. Valid values for a new entry are a
+					single IP, IP range, or CIDR, for example "10.12.34.56", "10.0.0.32-10.0.0.63",
+					or "10.0.0.0/8". Invalid values are "0.0.0.0" and "any". Please remember to
+					select the Targetable Network after adding it.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>An Active Sensor can be removed by checking the checkbox on its left-hand side, and
+			clicking the trash bin icon in the upper-right corner of the Active Sensor table. </p>
+        <p>Because an Active Sensor will only perform an action when the user issues a task, the
+			Active Sensor has no pause option. An Active Sensor automatically activates when a task
+			is created, and it automatically pauses once its tasks are done. </p>
+        <p>To view the configuration of an Active Sensor after its creation, click on the sensor
+			name to open its details. The configuration of the sensor is shown on the left-hand side
+			of this page. </p>
+        <p>To edit the configuration, click <span class="uicontrol">Edit</span> in the sub-menu, and change the
+			configuration in the form modal that appears. The edit options available are Sensor
+			Name, IP Address Reuse, Associated Monitored Networks and Targetable Networks. </p>
+        <div class="section" id="section_x5x_tbt_rcc">
+            <h2 class="sectiontitle">Reserved IP Ranges</h2>
+            <p>The Active Sensor uses a private virtual network to ensure secure internal
+				communications. A small range of IP addresses are reserved for this private network.
+				The Active Sensor cannot query assets on the network for these reserved IP
+				addresses. If the Active Sensor must be able to query IP addresses from the default
+				reserved range, the configuration can be updated on the server, to change the IP
+				range that is used for the Active Sensor private virtual network. Please refer to
+				the sections about installing an Active Sensor in the eyeInspect Installation and
+				Configuration guide for more information about the required configuration steps.</p>
+            <p>The default values for the reserved IP ranges are:<ul id="ol_w3d_lmp_jzb"><li>"172.16.255.0/28" and "172.17.0.0/16" on the Command Center server</li><li><p>"172.16.255.16/28" and "172.17.0.0/16" on the Active Sensor server </p></li></ul></p>
+        </div>
+    </body>
+</html>

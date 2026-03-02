@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="topic-9054" xml:lang="en-us" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\maintenance_settings.dita">
+    <head><title>Maintenance Settings</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Maintenance Settings</h1>
+        <p class="shortdesc">&#160;</p>
+        <p>The following maintenance settings are available:</p>
+        <div class="section" id="section_rhc_1nx_xcc">
+            <h2 class="sectiontitle">CC maintenance mode</h2>
+            <p>Some of the database maintenance activities required to guarantee
+				the correct and performance functioning of the Command Center are slowed down or
+				even blocked when the system is under a heavy transaction processing. Sensors are
+				the main responsible for transaction activities in the Command Center database. </p>
+            <p>The CC maintenance mode functionality can temporarily set the
+				Command Center in maintenance mode (i.e. pause and resume Sensors' transactions) to
+				ensure that maintenance activities can successfully complete. The CC maintenance
+				mode is automatically set when database maintenance activities are started, but can
+				also be manually set by the user (e.g. to enable a faster deletion of a very large
+				number of Alerts or hosts). </p>
+            <p>The Command Center can be in one of the following three
+				maintenance modes: <ul id="ul_k4w_1nx_xcc"><li><i>Regular - </i>No
+						maintenance ongoing</li><li><i>Automated maintenance
+							-</i> Maintenance mode was activated by a database maintenance activity
+						(e.g. vacuuming, re-indexing)</li><li><i>Manual maintenance -
+						</i>Maintenance mode was activated by the user</li></ul>The user can enable or disable manual maintenance mode only when the Command
+				Center is in regular mode, whereas automated maintenance mode will be activated both
+				if the Command Center is in regular or manual maintenance mode. During automated
+				maintenance mode, users will be prevented from performing operations with large
+				impact on the database (e.g. bulk delete of a large number of Alerts). </p>
+            <p>Users can enable manual maintenance mode by clicking on "CC
+				maintenance mode", and then on the "Enable" button; a yellow bar will appear under
+				the Command Center sub-menu to inform the user that the Command Center is under
+				maintenance. Users can at any moment disable manual maintenance by clicking on
+				"Disable maintenance". </p>
+        </div>
+        <div class="section" id="section_j1p_bnx_xcc">
+            <h2 class="sectiontitle">Activity scheduling</h2>
+            <p>Certain maintenance operations, such as re-indexing the database tables or
+				deleting old Alerts, can be scheduled to execute at predefined times. To add a new
+				scheduled activity, click the <b>+</b> icon above the scheduled activities table.
+				The following activity types are available:</p>
+            <p><b>Database Maintainer</b> - This job
+				executes maintenance operations on the Command Center database to optimize the
+				performance and resource usage. The options are the following: <table class="simpletable" id="simpletable_vzn_cnx_xcc"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td class="stentry"><i>Vacuum</i></td><td class="stentry">Reclaims "lost" storage space due to
+							deleted Alerts. Note that this is a heavy operation and should not run
+							more than once per month. A re-index is performed as part of the vacuum
+							operation. </td></tr><tr><td class="stentry"><i>Analyze</i></td><td class="stentry">Builds statistics of the database table
+							contents. The PostgreSQL query planner uses this information to optimize
+							queries. </td></tr><tr><td class="stentry"><i>Reindex</i></td><td class="stentry">Rebuilds the database table indexes which
+							are used in search operations.</td></tr></tbody></table></p>
+            <div class="note" id="note_wzn_cnx_xcc"><b>Note: </b>Vacuum and re-index operations must
+				not be scheduled at the same time. Only use re-index if there is no vacuum required.
+				Otherwise, use vacuum. </div>
+            <p><b>Alert Cleanup</b> - The job deletes
+				old alerts from the database to avoid running out of disk space in the Command
+				Center.</p>
+            <p><b>Host Change Log Cleanup</b> - This
+				job deletes old Host Change Log events from the database to avoid running out of
+				disk space in the Command Center. </p>
+            <p><b>Risk Calculation</b> - This job updates the risk scores of all the Assets in the
+				database.</p>
+            <p><b>Asset Analytics Refresh</b> - This job updates the Asset data source used in
+				analytics. By default, a refresh is done every 60 minutes.</p>
+            <p><b>Asset Deviations Computation</b> - This job computes deviations of host properties
+				from Asset Baseline policy constraints.</p>
+            <p><b>Host Cleanup </b> - This job deletes hosts which have
+				not been seen for the specified amount of days. </p>
+            <p><b>Default schedules</b> - Default schedules
+				will be automatically added for new deployments. For existing deployments, in case
+				one of the above activities is not scheduled, the eyeInspect Command Center will add
+				a scheduled activity using the default values listed in the below table. When
+				changing activity schedules, please ensure there are no overlapping schedules to
+				avoid unnecessary strain to the system. </p>
+            <p>
+                <table class="simpletable" id="simpletable_xzn_cnx_xcc">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Schedule</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="stentry"><i>Alert
+								Cleanup</i>
+                            </td>
+                            <td class="stentry">At 4:00 A.M., only on Sunday</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Asset Analytics Refresh</i>
+                            </td>
+                            <td class="stentry">At 03:00 AM, Monday through Friday</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Asset Deviations Computation</i>
+                            </td>
+                            <td class="stentry">At 15 minutes past the hour, Monday through Friday</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Database
+								Analyze</i>
+                            </td>
+                            <td class="stentry">At 10:00 P.M., only on Sunday</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Database
+								Vacuum</i>
+                            </td>
+                            <td class="stentry">At 12:00 P.M., on the last Sunday of the
+							month</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Host Change
+								Log Cleanup</i>
+                            </td>
+                            <td class="stentry">At 8:00 A.M., only on Sunday</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Host
+								Cleanup</i>
+                            </td>
+                            <td class="stentry">At 11:00 P.M.</td>
+                        </tr>
+                        <tr>
+                            <td class="stentry"><i>Risk Calculation</i>
+                            </td>
+                            <td class="stentry"> At 01:00 AM, Monday through Friday</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+        <div class="section" id="section_jdv_nxw_zfc">
+            <h2 class="sectiontitle">Clear data</h2>
+            <p>The Clear data page allows you to clear the sensor, Command Center and user settings
+				and logs data.</p>
+            <p>Only users with the admin role can execute this operation and will need to enter
+				their password.</p>
+            <p>The Clear data page displays a table of the available analytics datasources and
+				details such as the first and last segment date, size, status, date and result of
+				the last cleanup.</p>
+            <p>
+                <div class="note"><b>Note: </b>
+                    <ul>
+                        <li>If you encounter an error when trying to clear data, confirm that the
+							datasources have actually been removed, and try to clear data
+							again.</li>
+                        <li>No user other than the one executing the operation can be logged in to
+							the Command Center when the clear data operation is executed. A warning
+							will be issued if this is not the case when attempting the operation. </li>
+                        <li>Only one cleanup operation can be active at the same time. Wait for the
+							cleanup operation to complete before starting a new operation. </li>
+                        <li>The cleanup operation should be used with care. A cleanup does not need
+							to be run to optimize the performance and resource usage of the
+							analytics database. The database automatically performs optimizations.
+						</li>
+                    </ul>
+                </div>
+            </p>
+            <p>Which data is deleted and which is not can be found in the below table. In this table, a "Yes"
+				means that the data item is deleted when the corresponding checkbox (for sensors
+				data, Command Center data or users settings and logs data) is checked and "No" means
+				that it is not deleted even if the corresponding checkbox is checked. In addition,
+				maintenance operations on the analytics database can be performed here. To clear the
+				Dashboard and Network Analytics data, run the cleanup operation on the "Flow
+				information" data source. To clear all logged events, run the cleanup operation on
+				the "Event logs" data source.</p>
+            <p>
+                <table style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray; border-collapse: collapse;">
+                    <col title="c1" style="width: 1;" />
+                    <col title="c2" style="width: 1;" />
+                    <col title="c3" style="width: 1;" />
+                    <col title="c4" style="width: 1;" />
+                    <thead>
+                        <tr>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Data Item</th>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Command Center</th>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Sensor(s)</th>
+                            <th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">User Settings and Logs Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Widget configuration of the dashboard</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Analytics data</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Analytics tabs and widgets</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Network map tabs and their configurations</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Host and link information</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Asset Baseline individual policies</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Asset Baseline group policies</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Alerts</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Alert pcaps</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Event logs</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Continuous and one-time captures</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Sensor configuration</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Sensor profiles (LAN CP, DPBI, Protocol Monitor and SD
+									Scripts)</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Sensor modules (Portscan, MitM, Malformed Packet detection,
+									FEA, Visual analytics and Event logging) and the ITL</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes (reset)</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Sensor logs</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Connected Sensors</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">IP reuse domains</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Date and time settings</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Login disclaimer</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Scheduled activities</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">All syslog forwarders</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Alert filters</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Event customization</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Alert storing exceptions</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">User created users and roles</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">LDAP integration settings</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Account policies settings</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">User preferences</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">User activity logs</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Yes</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Command Center diagnostics settings</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Command Center logs</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">No</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+        <div class="section" id="section_ivg_dnx_xcc">
+            <h2 class="sectiontitle">Software and license management</h2>
+            <p>The Software and License management page allows easy management of the licenses of
+				all sensors connected to the Command Center. The page shows the software version,
+				license level, expiration dates and protocol restrictions. New licenses can be
+				uploaded and sent to one sensor or multiple sensors at once.</p>
+        </div>
+        <div class="section" id="section_y5k_2nx_xcc">
+            <h2 class="sectiontitle">Outbound Certificates Management</h2>
+            <p>The outbound certificates management page allows users to manage certificates for
+				outbound services such as: syslog forwarding, email forwarding and LDAP
+				configuration.</p>
+        </div>
+        <div class="section" id="section_rcg_fnx_xcc">
+            <h2 class="sectiontitle">Storing rules and notifications</h2>
+            <p>The storing rules and notification settings provide for asset storing,
+				which refines how eyeInspect deals with hosts.</p>
+            <p>The asset storing rules allow users to prevent assets from being
+				stored in the Command Center's database and displayed in the Network Map and
+				Monitored Hosts list. This is useful, for example, for Sensors monitoring networks
+				communicating with external hosts which are out of scope and responsibility of the
+				organization. Storing filters can be set for: <ul id="ul_ab1_gnx_xcc"><li><i>IP address - </i>Provides
+						the option to include all hosts, private IPs only, or custom address ranges. </li><li><i>Monitored networks</i> -
+						Provides the option to include all hosts, private IPs only, or custom
+						address ranges. </li></ul></p>
+        </div>
+        <div class="section" id="section_vqk_gnx_xcc">
+            <h2 class="sectiontitle">Health status log forwarding</h2>
+            <p>When enabling health status log forwarding, health status changes above or
+				below the warning/critical level will be forwarded to a remote syslog server, so
+				that the user can be warned about any issues while not actively using the eyeInspect
+				Command Center. Remote health logging can be enabled via "Settings" &gt; "System
+				Settings" &gt; "Health status log forwarding". </p>
+            <p>The configuration is the same as <a href="user_settings.htm#section_ex5_44x_xcc">user activity log
+					forwarding</a>, the only difference lies in the available tags. </p>
+        </div>
+    </body>
+</html>

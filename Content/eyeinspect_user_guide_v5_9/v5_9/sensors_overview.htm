@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="sensors_overview" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\sensors_overview.dita">
+    <head><title>Sensors Overview</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Sensors Overview</h1>
+        <p>The Sensors Overview page allows you to get an overview of all connected Passive and
+            Active sensors. </p>
+        <p>After logging in the system for the first time, begin by adding
+            Sensors, which are necessary to gain network visibility. The three type of available
+            Sensors are: <b>Passive Sensor</b>, <b>Active Sensor</b>, and <b>PCAP
+                Replay Sensor</b>. </p>
+        <div class="section" id="section_ijb_2vm_bgc">
+            <h2 class="sectiontitle">Passive Sensors</h2>
+            <p>The passive sensors table shows a list of enrolled passive sensors. For each passive
+                Sensor, its name, address, IP reuse domain, the monitored network it applies to, as
+                well as the health, monitoring and alert status of the Sensor is displayed. </p>
+            <p>There are two viewing options: Summary and Detailed. The views can be toggled using
+                the dropdown menu above the table, in the top-right corner. The default view is
+                Summary. When the Detailed view is selected, a more fine grained information about
+                the status of the modules and profiles is shown, with various details such as the
+                sensor name, encryption status, sensor address and more. </p>
+            <p>To quickly locate a specific passive Sensor it is possible to filter the list of
+                Sensors by name, address, IP reuse domain and monitored network using the "fields"
+                in the table's title bar. </p>
+            <p>Go to the <a href="passive_sensor_settings.htm">Passive Sensors Settings
+                    page</a> to learn more about the sensors and how to edit them.</p>
+        </div>
+        <div class="section" id="section_ilz_2vm_bgc">
+            <h2 class="sectiontitle">Active Sensors</h2>
+            <p>The active sensors table shows a list of enrolled active sensors, with various
+                details such as the name, address, target network, IP reuse domain, the monitored
+                network it applies to, the Sensor’s state and the number of pending tasks.</p>
+            <p>To quickly locate a specific active sensor, filter the list of Sensors by name,
+                address, IP reuse domain and monitored network using the "fields" in the table's
+                title bar. </p>
+            <p>For Active Sensors, all columns except the number of tasks can be used to quickly
+                filter for a specific Sensor. </p>
+            <p>To delete one or more active sensors, select the checkbox in the first column, which
+                enables the Delete icon above the active sensors table. </p>
+            <p>Go to the <a href="active_sensor_settings.htm">Active Sensors Settings
+                    page</a> to learn more about the sensors and how to edit them.</p>
+        </div>
+        <div class="section" id="section_kwc_p15_bgc">
+            <h2 class="sectiontitle">PCAP Replay Sensors</h2>
+            <p>For assessments, PCAP Replay Sensors can be used for replaying data from PCAP files.
+                For PCAP replay sensors, the sensor name will end with "(PCAP replay)". </p>
+            <p>
+                <div class="note" id="note_rsv_gb5_bgc"><b>Note: </b>PCAP Replay Sensors are only available in bundled
+                    configurations.</div>
+            </p>
+        </div>
+        <p>The following options are available in the secondary navigation bar on the Sensors
+            Overview page:</p>
+        <div class="section" id="section_dr1_cwl_gfc">
+            <h2 class="sectiontitle">Reload</h2>
+            <p>Reloads the sensors.</p>
+        </div>
+        <div class="section" id="section_r2w_cwl_gfc">
+            <h2 class="sectiontitle">New sensor</h2>
+            <p>Allows you to add a new sensor. The following options are available - click an option
+                to know more.</p>
+            <ul id="ul_bhl_dxl_gfc">
+                <li>Enrollment Overview: Allows you to accept or reject pending enrollment requests.
+                    To know more, go to:<ul id="ul_lqb_jcm_gfc"><li><a href="../adding-active-sensors.htm">Adding Active Sensors to the
+                                Command Center</a></li><li><a href="../adding-passive-sensors-version-5.1.0-or-higher.htm">Adding Passive Sensors (version 5.1.0 or higher)</a></li></ul></li>
+                <li>Add PCAP replay sensor. To know more, see <a href="../adding-pcap-replay-sensors.htm">Adding PCAP Replay
+                        Sensors</a>.<div class="note" id="note_ifj_tbm_gfc"><b>Note: </b>The option to add a PCAP reply
+                        sensor will only be visible in a bundled Command Center. Standalone Command
+                        Centers will only have the Enrollment overview option.</div></li>
+            </ul>
+        </div>
+        <div class="section" id="section_n3r_mwl_gfc">
+            <h2 class="sectiontitle">Pause</h2>
+            <p>Pauses the sensors.</p>
+        </div>
+        <div class="section" id="section_rcn_nwl_gfc">
+            <h2 class="sectiontitle">Configuration</h2>
+            <p>Allows you to view the available configuration templates. Navigate to Configuration &gt;
+                Templates overview.</p>
+        </div>
+        <div class="section" id="section_fxh_qwl_gfc">
+            <h2 class="sectiontitle">IP reuse domains</h2>
+            <p>Allows you to add IP reuse domains.</p>
+        </div>
+        <div class="section" id="section_x11_rwl_gfc">
+            <h2 class="sectiontitle">Monitored networks</h2>
+            <p>Click <b>Monitored
+                    networks</b> to open the monitored networks dialog, containing a table of
+                currently configured networks with name, address (CIDR notation), VLAN IDs,
+                description and all associated sensors. </p>
+            <p>The following actions are possible in
+                the Monitored networks dialog, by using the three icons above the
+                    table:</p>
+            <p><b>CSV Import</b>
+            </p>
+            <p>Import a list of monitored networks in CSV
+                format.</p>
+            <p><b>CSV Export</b>
+            </p>
+            <p>Export the list of monitored networks in CSV
+                format.</p><b>Add a new network</b>
+            <p>Use the add button (plus icon) to define a new
+                monitored network. More details about the "Address" and "VLAN IDs" fields can be
+                found by hovering over the question mark icon in the right corner of the field. Note
+                that a sensor can be associated with a monitored network in the sensor's
+                settings.</p>
+            <p>In addition, monitored networks for hosts which do not fall into any
+                current network can be generated automatically by using the "Create missing
+                networks" button and filling the form that shows up.</p><b>Editing an existing
+                network</b>
+            <p>To edit the details of a monitored network, click anywhere on the row
+                containing the network. After making the changes, click "Finish" to save your
+                changes.</p><b>Removing an existing network(s)s</b>
+            <p>To remove one or more
+                monitored networks, select them by checking the corresponding checkboxes and click
+                the delete button (identified by the trash bin icon) on the top right corner of the
+                table.</p>
+        </div>
+    </body>
+</html>

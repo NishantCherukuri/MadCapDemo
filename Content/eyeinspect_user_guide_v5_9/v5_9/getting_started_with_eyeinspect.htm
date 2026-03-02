@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="getting_started_with_eyeinspect" class="topic" MadCap:sourceDocument="C:\Users\ncherukuri\Documents\gitdoc-eyeinspect\eyeInspect\eyeInspect_User_Guide\v5_9\getting_started_with_eyeinspect.dita">
+    <head><title>Getting Started with the eyeInspect Command Center</title>
+        <link href="../custom (1).css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Getting Started with the eyeInspect Command Center</h1>
+        <p>This section gives an introduction to the eyeInspect Command Center, which is the user
+            interface of eyeInspect. The Command Center is used for sensor management and control
+            and to inspect events and manage third-party system integrations.</p>
+        <p>When a new monitoring profile is setup or an existing configuration is edited, the
+            Command Center sends the profile/configuration information to the relevant sensor. The
+            Command Center can manage multiple sensors. The sensors send events and network
+            analytics information to the Command Center, where the information is stored in a
+            database for inspection. The communication between the Command Center and the sensors is
+            encrypted. If the connection is temporarily interrupted, the sensor buffers the events
+            until the Command Center can be reached again.</p>
+        <p>The events and sensor health information can also be forwarded to a third-party system,
+            such as a SIEM or syslog server. The Command Center can also integrate with third-party
+            systems, such as LDAP for user authentication.</p>
+        <div class="section" id="section_ftz_n14_zfc">
+            <h2 class="sectiontitle">Log In</h2>
+            <p>Open a browser and enter the URL of the eyeInspect Command Center:
+                    <b>https://ADDR</b> where ADDR is either the IP address or the domain name of
+                the eyeInspect Command Center appliance. The default username and password are both
+                set to <b>admin</b>. After the first login, a password change is required. If a
+                wrong username/password combination is entered three times, the account is locked
+                for 10 minutes. These values, as well as the password requirements, can be
+                configured in the eyeInspect Command Center settings.</p>
+        </div>
+        <div class="section" id="section_nwt_bjl_gfc">
+            <h2 class="sectiontitle">Navigation Guide</h2>
+            <p>The Command Center has two navigation bars: Primary (dark blue)
+                and Secondary (light blue). Both are split into three sections: left, middle, and
+                right, and contain the following details: </p>
+            <p>
+                <div class="div">
+                    <div class="equation-figure" id="equation-figure_x32_mr4_jzb">
+                        <p>
+                            <table class="simpletable" id="table_rdl_lx1_vwb">
+                                <tbody>
+                                    <tr>
+                                        <td class="stentry"><i>Primary navigation bar</i>
+                                        </td>
+                                        <td class="stentry">
+                                            <ul id="ul_enn_vr4_jzb">
+                                                <li>Left - Logo</li>
+                                                <li>Middle - Command Center Menu
+                                                Items and Sub-menu items</li>
+                                                <li>Right - Command Center
+                                                Diagnostics, Sensors Overview, Alerts, Export
+                                                Report, Users, and Logout</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="stentry"><i>Secondary navigation bar</i>
+                                        </td>
+                                        <td class="stentry">
+                                            <ul id="ul_awq_zr4_jzb">
+                                                <li>Left - Page Name</li>
+                                                <li>Middle - Page Actions</li>
+                                                <li>Right - Current Time, System
+                                                Time Zone, and Help Section</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </p>
+        </div>
+        <div class="section" id="section_dj2_ljl_gfc">
+            <h2 class="sectiontitle">Command Center Menus</h2>
+            <p>The primary navigation bar contains the following menu items: </p>
+            <ul id="ul_sz2_njl_gfc">
+                <li><a href="home.htm">Home</a>
+                </li>
+                <li><a href="assets.htm">Assets</a>
+                </li>
+                <li><a href="events.htm">Events</a>
+                </li>
+                <li><a href="analytics.htm">Analytics</a>
+                </li>
+                <li><a href="sensors.htm">Sensors</a>
+                </li>
+                <li><a href="settings.htm">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section" id="section_e1h_xjl_gfc">
+            <h2 class="sectiontitle">Primary Navigation Bar Icons</h2>
+            <p>The following icons are displayed on the primary navigation bar: </p>
+            <p>
+                <img src="../Graphics/primary navigation bar icons.png" id="image_vxg_22m_bgc" />
+            </p>
+            <p>The icons are, in order:</p>
+            <ol id="ul_zbq_5pm_gfc">
+                <li><b>Command Center Diagnostics</b>: The Command Center Diagnostics reports
+                    details about the Command Center's CPU, memory and disk usage and system
+                    components. To know more, go to the <a href="command_center_diagnostics.htm">Command Center Diagnostics</a> page.</li>
+                <li><b>Sensors Overview</b>: Takes you to the <a href="sensors_overview.htm">Sensors Overview</a> page.</li>
+                <li><b>Alerts</b>: Takes you to the <a href="../alerts.htm">Alerts</a> page. </li>
+                <li><b>Export Report</b>: Allows you to export reports. To know more, go to the
+                        <a href="export_reports.htm">Export Reports</a> page. </li>
+                <li><b>Username</b>: Allows you to change the password of your account on the
+                    Command Center. The username is displayed next to the profile icon - in the
+                    screenshot above, <b>ADMIN</b> is the username of the account currently logged
+                    in. </li>
+                <li><b>Logout</b>: Logs you out of the Command Center.</li>
+            </ol>
+        </div>
+    </body>
+</html>
