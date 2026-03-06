@@ -1,0 +1,164 @@
+/*<meta />*/
+
+h1.topictitle
+{
+	
+}
+
+html.topic
+{
+	font-family: sans-serif;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+p
+{
+	margin-top: 6pt;
+}
+
+ul
+{
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+}
+
+li
+{
+	margin-left: 20pt;
+	margin-top: 6pt;
+	margin-bottom: 2pt;
+}
+
+p.shortdesc
+{
+	
+}
+
+table
+{
+	border-left: thin solid gray;
+	border-right: thin solid gray;
+	border-top: thin solid gray;
+	border-bottom: thin solid gray;
+	border-collapse: collapse;
+	margin-top: 12pt;
+}
+
+td
+{
+	border-left: thin solid gray;
+	border-right: thin solid gray;
+	border-top: thin solid gray;
+	border-bottom: thin solid gray;
+}
+
+h1.tasktitle
+{
+	
+}
+
+html.task
+{
+	
+}
+
+body.taskbody
+{
+	
+}
+
+div.context
+{
+	
+}
+
+ol.steps
+{
+	
+}
+
+li.step
+{
+	
+}
+
+span.cmd
+{
+	
+}
+
+div.result
+{
+	
+}
+
+ol.substeps
+{
+	
+}
+
+ul.substeps
+{
+	
+}
+
+li.substep
+{
+	
+}
+
+div.note
+{
+	margin-top: 6pt;
+}
+
+div.note
+{
+	
+}
+
+h1.concepttitle
+{
+	
+}
+
+html.concept
+{
+	font-family: sans-serif;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 6pt;
+	margin-bottom: 9pt;
+}
+
+body.conbody
+{
+	margin-top: 6pt;
+}
+
+th
+{
+	border-left: thin solid gray;
+	border-right: thin solid gray;
+	border-top: thin solid gray;
+	border-bottom: thin solid gray;
+}
+
+div.section
+{
+	margin-top: 12pt;
+}
+
+h2.sectiontitle
+{
+	
+}
+
+div.info
+{
+	
+}
+

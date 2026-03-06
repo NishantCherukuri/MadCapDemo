@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="concept-8818" xml:lang="en-us" class="concept">
+    <head><title>Command Center High Availability</title>
+        <link href="eyeinspect_configuration_guide_v5_9.css" rel="stylesheet" />
+    </head>
+    <body class="conbody">
+        <h1 class="concepttitle">Command Center High Availability</h1>
+        <p class="shortdesc">&#160;</p>
+        <div class="note"><b>Note: </b>Updates to the vulnerability database will not be synchronized between
+            primary and secondary Command Center. If switching the Secondary Command Center to
+            Active Mode is required, it is recommended to update the vulnerability database to the
+            latest version provided on the Forescout OT Portal.</div>
+        <p>The eyeInspect Command Center is able to operate in a "warm standby" High
+            Availability mode. This means it is possible to configure a second eyeInspect Command
+            Center to act as a replica of a primary eyeInspect Command Center. The replica will
+            synchronize its main database (assets, alerts and related information) and the
+            analytical database with the primary server. </p>
+        <p>While an eyeInspect Command Center is in High Availability mode as
+            secondary, the eyeInspect Command Center web interface is not accessible and the
+            database is marked as read-only, to prevent any conflicts when synchronizing. The
+            following sections describe how to configure the High Availability mode and how to
+            switch the Secondary Command Center to Active. </p>
+        <p>Go to the following pages to learn more:</p>
+        <ul id="ul_azp_bld_dgc">
+            <li><a href="v5_9/eyeinspect_command_center_high_availability_network_topology.htm">eyeInspect Command Center High Availability Network
+                                        Topology</a>
+            </li>
+            <li><a href="v5_9/configure_high_availability_between_the_primary_and_secondary_command_center.htm">Configure High Availability between the Primary and
+                                        Secondary Command Centers</a>
+            </li>
+            <li><a href="verify-the-eyeinspect-command-center-high-availability.htm">Verify the eyeInspect Command Center High Availability</a>
+            </li>
+            <li><a href="v5_9/switch_secondary_command_center_to_active_mode.htm">Switch Secondary Command Center to Active Mode</a>
+            </li>
+            <li><a href="v5_9/disable_high_availability_configuration_on_the_command_center.htm">Disable High Availability Configuration on the Command
+                                        Center</a>
+            </li>
+        </ul>
+    </body>
+</html>

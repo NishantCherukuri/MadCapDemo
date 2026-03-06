@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="command_center_startup_options" class="topic">
+    <head><title>Command Center Startup Options</title>
+        <link href="eyeinspect_configuration_guide_v5_9.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">Command Center Startup Options</h1>
+        <p>The eyeInspect Command Center (CC) has a number of startup options, which are described
+            below. To use the startup options, modify or create, if non-existent,
+                <code>/opt/sdconsole/conf/application.properties</code> and use one of the
+            following options in the format <code>property=value</code>. After saving your
+            changes, start the Command Center by executing the following command:
+            <pre id="codeblock_act_kkg_gcc" class="language-bourne">sudo supervisorctl start silentdefense-cc</pre></p>
+        <p>If the Command Center was already running, restart it by executing the following
+            command:<pre id="codeblock_ovj_mkg_gcc" class="language-bourne">sudo supervisorctl restart silentdefense-cc</pre></p>
+        <p>The following table describes the available eyeInspect Command Center startup options. </p>
+        <p>
+            <table id="table_mtd_gmg_gcc" style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray; border-collapse: collapse;">
+                <col title="col1" style="width: 155;" />
+                <col title="col2" style="width: 141;" />
+                <col title="col3" style="width: 319;" />
+                <tbody>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;"><b>Option</b>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;"><b>Default value</b>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;"><b>Description</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.alerts.displayCountryAndFlag</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">true</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Display source country flag and name for alerts with a
+                                    <code>sourceip</code> assigned to any country according to
+                                the GeoIP database.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.countConnectedSensorsInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">60</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Period for recounting connected sensors.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchAlertsInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The interval (in seconds) for fetching new alerts.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchCCDiagnosticsInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Polling period in seconds for CC diagnostics data.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchHostLinkInfoInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">60</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The interval (in seconds) for fetching new host and link
+                                    information for the network map.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchPatrolTasksResultInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">10</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Period in secs for fetching active sensor tasks results.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchPatrolStatusInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">30</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Period in secs fetching active sensor health status.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchSensorDetailsInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">600</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The interval (in seconds) for refreshing the sensors
+                                configuration in the Command Center.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.fetchSensorStatusInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The interval (in seconds) for sensor status checks.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.cronjob.maxFetchHosts</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">7500</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">How many times the CC asks the sensor for new or updated hosts
+                                (in case the sensor reported that there are more hosts available) at
+                                each cronjob run.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.cronjob.maxFetchLinks</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">30000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">How many times the CC asks the sensor for new or updated links(in
+                                case the sensor reported that there are more links available) at
+                                each cronjob run.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.cronjob.reconnectPatrolSensorInterval</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">60</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Period in seconds attempting reconnection to active
+                                sensors.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.csv.fieldSep</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">,</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The field separator for CSV files. Make sure to input only one
+                                    character.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.diagnostics.export.maxDBLogEntries</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">25000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of database log entries exported.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.diagnostics.export.maxLogFileSize</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">26214400</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The maximum file size of log files exported in bytes, default is
+                                    25 MB.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.dropdown.max.items</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">2000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The maximum number of items displayed in a dropdown menu or
+                                    list.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.druid.brokerURL</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">http://localhost:8082</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The URL for the Druid broker.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.druid.coordinatorURL</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">http://localhost:8081</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The URL for the Druid coordinator.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.druid.overlordURL</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">http://localhost:8090</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The URL for the Druid overlord.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.dpbi.enable-all-parsable</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">false</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Enables or disables all parsable protocols in DPBI.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.ipresolve.enabled</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">true</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Enables or disables the automatic resolving of IP addresses.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.ipresolve.maxResolvingThreads</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">2000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of IP resolving threads.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.ipresolve.maxCachedItems</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">1000000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of cached IPs.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.ipresolve.resolvedTimeoutSec</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">300</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The cache timeout for resolved IPs in seconds.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.ipresolve.unresolvedTimeoutSec</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">60</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The cache timeout for not resolved IPs in seconds.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.kafka.topic.custom-events</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">events</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The kafka topic name for custom events.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.kafka.topic.flow-info</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">flow-info</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The kafka topic to use for the flow-info information (as used by
+                                    network analytics and the dashboard).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.kafka.server</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">127.0.0.1</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The kafka server IP address. Note, when changing the kafka server
+                                    and/or port, specify both properties.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.kafka.port</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">9092</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The port of the kafka server.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.lan.defaultMaxLearntRules</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">1000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>Default maximum number of learnt rules in a new LAN CP profile.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.lan.maxLearntRulesHighLimit</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>Upper limit on the maximum number of LAN CP learnt rules the user can
+                                    choose.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.logpath</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">logs/</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The directory (relative to the base path) where the logs should be
+                                    stored.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.map.maxHosts</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">10000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of hosts shown in the network map.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.map.maxHostPropertyPastValues</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The maximum number of previous values stored for asset
+                                    properties.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.map.maxChangelogValueChanges</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">3</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of times a specific asset property value will
+                                generate a changelog entry. This limit is used to prevent continuous
+                                updates of property values, generated for example by conflicting
+                                software messages.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.map.maxLinks</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">2500</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of links shown in the network map.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.map.sanitizePLCRTURole</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">true</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>Removes roles PLC, RTU or Slave when more accurate roles are
+                                    applicable.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>sdcc.max.generated.monitored.networks</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">10000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The maximum number of monitored networks automatically generated by
+                                    the “Create missing networks” functionality.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.min-free-gb</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">3</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The minimum allowed volume space to allow uploading of PCAP
+                                    files.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.patrol.requestTimeout</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">0</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Active sensor endpoint HTTP request timeout in milliseconds.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.patrol.maxConnPerRo</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Active sensor endpoint maximum allowed connection per route.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.patrol.maxTotalConn</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Active sensor endpoint maximum total connections.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.patrol.keepAlive</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Active sensor endpoint connection <code>keepAlive</code> in
+                                milliseconds.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.patrol.connTimeout</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">2000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>Active sensor endpoint timeout in milliseconds to attempt to
+                                    establish a connection.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.pcap-max-mb</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">1024</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>The maximum allowed size in megabytes of uploaded PCAP files.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.pcapDownloadPage.closeDelay</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The time in milliseconds that the Command Center will wait for the
+                                Sensor to provide the PCAP file after it has been prepared. If the
+                                PCAP cannot be downloaded, for instance when the latency between the
+                                Sensor and the Command Center is very high or when bandwidth
+                                throttling is enabled and the maximum upload speed is very low (e.g.
+                                1024 Kbps or lower), consider increasing this value.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.reportpath</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">report/</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The directory (relative to the base path) where the reports get
+                                stored.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.request-cycle.timeout-secs</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">60</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">HTML page request cycle timeout.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.sensor-encryption-at-rest.enabled</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">true</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Enables or disables the UI menu to encrypt sensor data at
+                                rest.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.sniff-offline-path</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">
+                            <p>/opt/nids/pcaps/sniffoffline/</p>
+                        </td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The directory (absolute path) where the PCAP replay files get
+                                stored.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.vnids-grace-period</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The period in seconds to let a virtual sensor to start.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.widget-query-timeout</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">30</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The timeout in seconds after which the widget query will stop
+                                processing.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.workflow.maxPendingAlertsPerPlugin</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">10000</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of pending alerts per plugin. Not specifying this
+                                property will leave it at infinity.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.zookeeper.server</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">localhost</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The <code>ZooKeeper</code> IP or hostname (used for
+                                diagnostics).</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">sdcc.zookeeper.jmxPort</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">-</td>
+                        <td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The <code>ZooKeeper</code> jmx port (used for diagnostics). Note,
+                                when changing the zookeeper server and/or port, specify both
+                                properties.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>Additional configuration parameters can be found and edited in the files
+                <code>/opt/druid/conf/historical/runtime.properties</code> and
+                <code>/opt/icsp/icsp-cc/conf/icsp.conf</code>. </p>
+        <p>The parameters in file <code>runtime.properties</code> can be used to tune the Druid
+            configuration to ensure the best data processing and retention strategy, based on the
+            available system resources. The table below lists the most relevant ones. It is required
+            to restart the Command Center for changes to apply.<table id="table_km2_2pg_gcc" style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray; border-collapse: collapse;"><col title="c1" style="width: 1;" /><col title="c2" style="width: 1;" /><col title="c3" style="width: 1;" /><thead><tr><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Option</th><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Default Value</th><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Description</th></tr></thead><tbody><tr><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">druid.segmentCache.locations</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">[{"path": "/tmp/druid/indexCache", "maxSize": &lt;25% of the disk
+                                size&gt;}]</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The (maximum) disk space used for segments that are to be
+                                assigned to the Druid historical node. If 95% of this limit is
+                                reached, older segments will be deleted to ensure new data can be
+                                correctly processed and displayed (this threshold is configurable
+                                from the Command Center Diagnostics page).</td></tr></tbody></table></p>
+        <p>The parameters in file <code>icsp.conf</code> can be used to tune the Active Sensor
+            configuration, e.g. for log collection and retention. The table below lists the most
+            relevant ones. It is required to restart the Command Center for changes to apply.<table id="table_xp3_hpg_gcc" style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray; border-collapse: collapse;"><col title="c1" style="width: 1;" /><col title="c2" style="width: 1;" /><col title="c3" style="width: 1;" /><thead><tr><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Option</th><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Default Value</th><th style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">Description</th></tr></thead><tbody><tr><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">rotate</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">5</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum number of log files that are stored. Older files will
+                                be deleted when new ones are created.</td></tr><tr><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">maxsize</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">100</td><td style="border-top-style: solid; border-top-width: thin; border-top-color: gray; border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: gray; border-left-style: solid; border-left-width: thin; border-left-color: gray; border-right-style: solid; border-right-width: thin; border-right-color: gray;">The maximum size (in MB) of log files. Log files will be rotated
+                                if this limit is reached.</td></tr></tbody></table></p>
+    </body>
+</html>

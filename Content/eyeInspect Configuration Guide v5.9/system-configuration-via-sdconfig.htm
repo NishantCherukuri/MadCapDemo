@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" id="topic-1662" xml:lang="en-us" class="topic">
+    <head><title>System Configuration via SDConfig</title>
+        <link href="eyeinspect_configuration_guide_v5_9.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="topictitle">System Configuration via SDConfig</h1>
+        <p class="shortdesc">&#160;</p>
+        <p>This section describes the SDConfig tool used to configure all eyeInspect
+      systems. </p>
+        <p>The sdconfig tool is a configuration utility used for configuring the eyeInspect system. The
+      sdconfig tool is launched from the command line (by running <code>sudo sdconfig</code>)
+      and can be accessed either by logging in to a system via SSH, through a physical terminal in
+      case of deployment on a physical server, or through a hypervisor client. </p>
+        <p>The following table describes the available options based on whether a Command Center or a
+      Passive/Active Sensor is installed on the server. Click each feature name to know more about
+      the respective feature.</p>
+        <p>
+            <table id="table_spy_1f2_dgc">
+                <col title="c1" />
+                <col title="c2" />
+                <col title="c3" />
+                <col title="c4" />
+                <tbody>
+                    <tr>
+                        <td><b>Feature</b>
+                        </td>
+                        <td><b>CC</b>
+                        </td>
+                        <td><b>Passive Sensor</b>
+                        </td>
+                        <td><b>Active Sensor</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="management-network-interface.htm">Management network
+                  interface</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="system-hostname.htm">System hostname</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="user-password.htm">User password</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="command-center-memory-allocation.htm">Command Center memory
+                  allocation</a>
+                        </td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="v5_9/passive_sensor_configuration.htm">Passive Sensor
+                  configuration</a>
+                        </td>
+                        <td>&#160;</td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="v5_9/active_sensor_configuration.htm">Active Sensor
+                  configuration</a>
+                        </td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="secondary_network_interfaces.htm">Secondary network
+                  interfaces</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="static-routes.htm">Static routes</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="command-center-high-availability.htm">Command Center High
+                  Availability</a>
+                        </td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="analytics-retention-time.htm">Analytics retention
+                time</a>
+                        </td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="reset-command-center-admin-password.htm">Command Center admin
+                  password</a>
+                        </td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="service-passphrases-and-keys.htm">Service passphrases and
+                  keys</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="v5_9/snmp.htm">SNMP</a>
+                        </td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><a href="v5_9/fips.htm">FIPS</a>
+                        </td>
+                        <td>✓</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>Exit</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>When run on an eyeInspect Passive Sensor, the options will be limited to those of Passive
+      Sensors, as described in the above table. When run on a bundled Command Center and Passive
+      Sensor deployment, all options will be available.</p>
+    </body>
+</html>
